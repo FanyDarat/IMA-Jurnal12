@@ -5,19 +5,14 @@ public class BinarySearch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Membaca banyak barang yang akan diinput
         int n = sc.nextInt();
-        sc.nextLine();  // Untuk menangkap newline setelah nextInt()
+        sc.nextLine();
 
-        // Membaca data inventaris (diasumsikan sudah terurut)
         String[] inventaris = sc.nextLine().split(" ");
-
-        // Membaca key yang dicari
         String key = sc.nextLine();
 
         Arrays.sort(inventaris);
 
-        // Mencari key menggunakan Binary Search
         int pos = binarySearch(inventaris, key);
 
         // Output hasil pencarian
@@ -30,7 +25,6 @@ public class BinarySearch {
         sc.close();
     }
 
-    // Fungsi Binary Search
     public static int binarySearch(String[] arr, String X) {
         int low = 0;
         int high = arr.length - 1;
